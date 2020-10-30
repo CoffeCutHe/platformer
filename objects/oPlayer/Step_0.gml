@@ -116,7 +116,7 @@ attack=0;
 jump=1;
 }
 
-if (jump == 1 && vsp>0.2 && place_meeting(x,y+1,oWall) ) {
+if (jump == 1 && vsp>0.1 && place_meeting(x,y+1,oWall) ) {
 walk = 0;
 idle = 1;
 run=0;

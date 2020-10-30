@@ -2,6 +2,7 @@
 walksp = 4;
 vsp = 0;
 grv = 0.3;
+hp=100;
 //состояния
 idle = 1;
 walk=0;

@@ -123,7 +123,7 @@
     "backdropXOffset": 0.0,
     "backdropYOffset": 0.0,
     "xorigin": 11,
-    "yorigin": 24,
+    "yorigin": 27,
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sSAttack","path":"sprites/sSAttack/sSAttack.yy",},

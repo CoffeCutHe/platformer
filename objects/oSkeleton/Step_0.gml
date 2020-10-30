@@ -38,10 +38,10 @@ if (hsp<0) {
 //todo!!!
 if (enemy && !death) {
 	//damage from hero
-if (oPlayer.sprite_index = sAttack && oPlayer.image_index>3 && oPlayer.image_index<5) hp-=10;
+if (oPlayer.sprite_index = sAttack && oPlayer.image_index>3 && oPlayer.image_index<5) hp-=1*oPlayer.STR;
 	
 	hsp=0;
-	sprite_index = sSIdle;
+	sprite_index = sSAttack;
 	if (oPlayer.x>x) image_xscale = 1 else image_xscale = -1;
 	
 } else {

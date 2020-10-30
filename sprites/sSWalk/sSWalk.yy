@@ -103,7 +103,7 @@
     "backdropXOffset": 0.0,
     "backdropYOffset": 0.0,
     "xorigin": 9,
-    "yorigin": 22,
+    "yorigin": 23,
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sSWalk","path":"sprites/sSWalk/sSWalk.yy",},

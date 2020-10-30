@@ -9,6 +9,8 @@ walk=0;
 run=0;
 attack=0;
 jump=0;
+//статы
+STR = 1;
 
 
 

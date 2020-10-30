@@ -147,6 +147,9 @@ run=0;
 attack=1;
 jump=0;	
 }
+
+//damage from skeleton
+
  
 
 

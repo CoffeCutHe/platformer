@@ -1,1 +1,1 @@
-draw_text (200,200, image_number);
+draw_text (200,200, hp);

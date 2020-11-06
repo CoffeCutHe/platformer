@@ -41,35 +41,25 @@ if (hsp>0) {
 	}
 
 //тут состояния
-if walk == 1{
+if walk == 1{  //хотьба
 	walksp = 4;
 	x=x+hsp;
 	sprite_index = sWalk;
 	image_speed=1;
-	/*
-	if (hsp>0) {
-		sprite_index = sWalk;
-		image_speed = 1;
-	}
-	if (hsp<0) {
-		sprite_index = sWalk;
-		image_speed = 1;
-	}*/
+
 }
 
-if idle = 1 {
+if idle = 1 { //idle
 	sprite_index = sIdle;
 	image_speed = 1;
 }
 
-if jump == 1 {
+if jump == 1 { //jump
 	image_speed=0;
 	sprite_index = sJump;
 	
 	if vsp > 0 image_index = 4;
 	if vsp < 0 image_index = 2;
-		
-//прыжок
 	if (place_meeting(x,y+1,oWall)) && (key_jump) {
 		vsp = -7;
 	}
@@ -82,7 +72,7 @@ if (run == 1) {
 	sprite_index = sWalk;
 	image_speed = 2;
 }
-
+//attack
 if (attack == 1) {
 	sprite_index = sAttack;
 	if (image_index>=5) {
@@ -92,7 +82,7 @@ if (attack == 1) {
 }
 
 //тут переходы
-if hsp<>0 && (idle ==1 || run ==1) {
+if hsp<>0 && (idle ==1 || run ==1) { //перехд в движение из idle
 walk = 1;
 idle = 0;
 run=0;
@@ -100,7 +90,7 @@ attack=0;
 jump=0;
 }
 
-if (hsp == 0 && walk == 1) {
+if (hsp == 0 && walk == 1) { //переход из движения в idle
 walk = 0;
 idle = 1;
 run=0;
@@ -108,7 +98,7 @@ attack=0;
 jump=0;
 }
 
-if (key_jump && (walk ==1 || idle ==1 || run ==1)) {
+if (key_jump && (walk ==1 || idle ==1 || run ==1)) { //начало прыжка
 walk = 0;
 idle = 0;
 run=0;
@@ -116,7 +106,7 @@ attack=0;
 jump=1;
 }
 
-if (jump == 1 && vsp>0.1 && place_meeting(x,y+1,oWall) ) {
+if (jump == 1 && vsp>0.1 && place_meeting(x,y+1,oWall) ) { //конец прыжка --ФИКСИТЬ--
 walk = 0;
 idle = 1;
 run=0;
@@ -125,7 +115,7 @@ jump=0;
 	
 }
 
-if (walk ==1 && key_run_start) {
+if (walk ==1 && key_run_start) { //переход из хотьбы в бег
 walk = 0;
 idle = 0;
 run=1;
@@ -133,14 +123,14 @@ attack=0;
 jump=0;	
 }
 
-if (run ==1 && key_run_stop) {
+if (run ==1 && key_run_stop) { //выход из бега
 walk = 1;
 idle = 0;
 run=0;
 attack=0;
 jump=0;	
 }
-if (idle == 1 && key_attack) {
+if (idle == 1 && key_attack) { //атака из idle
 walk = 0;
 idle = 0;
 run=0;

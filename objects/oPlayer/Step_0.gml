@@ -4,13 +4,10 @@ key_right = keyboard_check(vk_right);
 key_jump = keyboard_check(vk_space);
 key_attack = keyboard_check(vk_shift);
 key_run_start = keyboard_check(vk_control);
-key_run_stop = keyboard_check_released(vk_control);
 if keyboard_check(ord("R")) room_restart();
 
 var move = key_right-key_left;
 hsp = move*walksp;
-
-
 
 //горизонтальная коллизия
 if (place_meeting(x+hsp,y,oWall)) {
@@ -69,6 +66,7 @@ if walk == 1{  //хотьба
 if idle = 1 { //idle
 	sprite_index = sIdle;
 	image_speed = 1;
+	stop=0;
 }
 
 if jump == 1 { //jump
@@ -90,11 +88,36 @@ if (run == 1) {
 }
 //attack
 if (attack == 1) {
+	
 	sprite_index = sAttack;
 	if (image_index>=5) {
 	attack = 0;
 	idle = 1;
 	}
+	
+	var lay_id = layer_get_id("Items");
+	var map_id = layer_tilemap_get_id(lay_id);
+	data = tilemap_get_at_pixel(map_id, x, y+10);
+	
+	if (data == 19 && !stop) {
+		tilemap_set_at_pixel(map_id,20,x,y+10);
+		stop=1;	
+	}
+	//
+	if (data == 20 && !stop) {
+		tilemap_set_at_pixel(map_id,21,x,y+10);
+		stop=1;
+	}
+	//
+	if (data == 21 && !stop) {
+		if random_range(1,4)<2 tilemap_set_at_pixel(map_id,83,x,y+10) else tilemap_set_at_pixel(map_id,42,x,y+10)
+		stop=1;
+	}
+	//
+	
+	
+	
+	
 }
 
 //тут переходы
@@ -134,7 +157,7 @@ jump=0;
 fall=0;
 }
 
-if (run ==1 && key_run_stop) { //выход из бега
+if (run ==1 && hsp==0) { //выход из бега
 walk = 1;
 idle = 0;
 run=0;

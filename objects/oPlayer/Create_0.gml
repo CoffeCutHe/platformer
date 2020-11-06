@@ -17,6 +17,11 @@ STR = 1;
 fallStop=0;
 canJump=1;
 
+//tileswork
+data=-2;
+stop=0;
+randomize();
+
 
 
 

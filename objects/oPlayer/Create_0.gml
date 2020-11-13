@@ -14,7 +14,7 @@ fall=1;
 STR = 1;
 
 //костыль с прыжком
-fallStop=0;
+
 canJump=1;
 
 //tileswork
@@ -22,6 +22,8 @@ data=-2;
 stop=0;
 randomize();
 
+//keys
+KeyGold=false
 
 
 

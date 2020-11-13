@@ -24,4 +24,11 @@ draw_text(60,250,y);
 
 draw_text(300,300,data);
 
+if (KeyGold) {
+	var lay_id = layer_get_id("Inventory");
+	var map_id = layer_tilemap_get_id(lay_id);
+	
+	data = tilemap_set_at_pixel(60,map_id, 1, 1);
+}
+
 

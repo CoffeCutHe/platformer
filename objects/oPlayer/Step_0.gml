@@ -95,26 +95,7 @@ if (attack == 1) {
 	idle = 1;
 	}
 	
-	var lay_id = layer_get_id("Items");
-	var map_id = layer_tilemap_get_id(lay_id);
 	
-	data = tilemap_get_at_pixel(map_id, x, y+10);
-	
-	if (data == 19 && !stop) {
-		tilemap_set_at_pixel(map_id,20,x,y+10);
-		stop=1;	
-	}
-	//
-	if (data == 20 && !stop) {
-		tilemap_set_at_pixel(map_id,21,x,y+10);
-		stop=1;
-	}
-	//
-	if (data == 21 && !stop) {
-		if random_range(1,4)<2 tilemap_set_at_pixel(map_id,83,x,y+10) else tilemap_set_at_pixel(map_id,42,x,y+10)
-		stop=1;
-	}
-	//
 	
 	
 	
@@ -199,9 +180,11 @@ canJump=1;
 
 if (place_meeting(x,y,oSkeleton) && oSkeleton.image_index>=7 && oSkeleton.image_index<=10) {
 playerHP-=1;
-
 }
 
+//key pickup
+
+if place_meeting(x,y,oKeyGold) KeyGold=true;
 
 
  

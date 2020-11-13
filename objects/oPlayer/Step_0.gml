@@ -97,6 +97,7 @@ if (attack == 1) {
 	
 	var lay_id = layer_get_id("Items");
 	var map_id = layer_tilemap_get_id(lay_id);
+	
 	data = tilemap_get_at_pixel(map_id, x, y+10);
 	
 	if (data == 19 && !stop) {
@@ -195,6 +196,13 @@ canJump=1;
 }
 
 //damage from skeleton
+
+if (place_meeting(x,y,oSkeleton) && oSkeleton.image_index>=7 && oSkeleton.image_index<=10) {
+playerHP-=1;
+
+}
+
+
 
  
 

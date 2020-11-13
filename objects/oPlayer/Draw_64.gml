@@ -15,7 +15,7 @@ draw_text(60,30,walk);
 draw_text(60,50,run);
 draw_text(60,70,attack);
 draw_text(60,90,jump);
-draw_text(60,120,hp);
+draw_text(60,120,playerHP);
 draw_text(60,150,fall);
 draw_text(60,180,vsp);
 draw_text(60,210,hsp);

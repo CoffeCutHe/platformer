@@ -2,7 +2,7 @@
 walksp = 4;
 vsp = 0;
 grv = 0.3;
-hp=100;
+playerHP=100;
 //состояния
 idle = 0;
 walk=0;

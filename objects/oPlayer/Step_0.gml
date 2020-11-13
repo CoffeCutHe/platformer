@@ -177,8 +177,9 @@ canJump=1;
 }
 
 //damage from skeleton
+var instID = instance_place(x,y,oSkeleton);
 
-if (place_meeting(x,y,oSkeleton) && oSkeleton.image_index>=7 && oSkeleton.image_index<=10) {
+if (place_meeting(x,y,oSkeleton) && instID.image_index>=7 && instID.image_index<=10) {
 playerHP-=1;
 }
 

@@ -2,6 +2,8 @@ if (place_meeting(x,y,oPlayer) && oPlayer.sprite_index=sAttack && oPlayer.image_
 	image_speed=1;
 }
 if (image_index>=3.5) {
-	instance_create_layer(x,y,"Instances",oKeyGold);
+	randomize();
+	var a = random_range(0,10);
+	if a>=7 instance_create_layer(x,y,"Instances",oKeyGold);
 	instance_destroy();
 }

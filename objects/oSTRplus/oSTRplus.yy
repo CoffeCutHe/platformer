@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "sKeyGold",
-    "path": "sprites/sKeyGold/sKeyGold.yy",
+    "name": "sSTRplus",
+    "path": "sprites/sSTRplus/sSTRplus.yy",
   },
   "solid": false,
   "visible": true,
@@ -21,8 +21,8 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
-    {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"parent":{"name":"oKeyGold","path":"objects/oKeyGold/oKeyGold.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"parent":{"name":"oKeyGold","path":"objects/oKeyGold/oKeyGold.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"parent":{"name":"oSTRplus","path":"objects/oSTRplus/oSTRplus.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"parent":{"name":"oSTRplus","path":"objects/oSTRplus/oSTRplus.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
@@ -31,7 +31,7 @@
     "path": "folders/Objects/Enviroment.yy",
   },
   "resourceVersion": "1.0",
-  "name": "oKeyGold",
+  "name": "oSTRplus",
   "tags": [],
   "resourceType": "GMObject",
 }

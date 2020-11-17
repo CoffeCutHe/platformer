@@ -15,6 +15,6 @@ if (place_meeting(x,y+vsp,oWall))
 }
 
 if (place_meeting(x,y,oPlayer) && canTake=1)  {
-oPlayer.KeyGold=true;
+oPlayer.STR+=1;
 instance_destroy();
 }

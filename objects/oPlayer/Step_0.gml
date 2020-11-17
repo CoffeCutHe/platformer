@@ -2,7 +2,7 @@
 key_left = keyboard_check(vk_left);
 key_right = keyboard_check(vk_right);
 key_jump = keyboard_check(vk_space);
-key_attack = keyboard_check(vk_shift);
+key_attack = keyboard_check(vk_shift); 
 key_run_start = keyboard_check(vk_control);
 if keyboard_check(ord("R")) room_restart();
 
@@ -186,6 +186,8 @@ playerHP-=1;
 //key pickup
 
 if place_meeting(x,y,oKeyGold) KeyGold=true;
+
+//if (place_meeting(x,y,oChest) && KeyGold) KeyGold=false;
 
 
  

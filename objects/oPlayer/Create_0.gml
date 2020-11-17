@@ -23,7 +23,7 @@ stop=0;
 randomize();
 
 //keys
-KeyGold=false
+KeyGold=false;
 
 
 
